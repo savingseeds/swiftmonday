@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Custom styles for professional look */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Professional input focus styles */
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  }
+  
+  /* Smooth transitions for all interactive elements */
+  button, a, input {
+    transition: all 0.2s ease;
+  }
+}
