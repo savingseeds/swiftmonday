@@ -1,4 +1,4 @@
-const Transak = require('@transak/transak-sdk')
+import * as TransakSDK from '@transak/transak-sdk'
 
 export const transakService = {
   // Initialize Transak widget
@@ -10,12 +10,12 @@ export const transakService = {
       cryptoCurrencyCode: 'USDT',
       network: 'solana',
       hideMenu: true,
-      walletAddress: 'YOUR_WALLET_ADDRESS',
+      walletAddress: 'DummyTestWalletAddress123',
       fiatAmount: 100,
       ...config
     }
 
-    const transak = new (Transak as any)(settings)
+    const transak = new (TransakSDK as any)(settings)
 
     transak.init()
 

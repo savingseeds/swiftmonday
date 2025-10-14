@@ -1,135 +1,42 @@
-import { useState } from 'react'
-import Navigation from './components/Navigation'
-import HeroContent from './components/HeroContent'
-import QuickTransfer from './components/QuickTransfer'
-import FeatureGrid from './components/FeatureGrid'
-import HowItWorks from './components/HowItWorks'
-import Modal from './components/Modal'
-import SendMoneySteps from './components/SendMoneySteps'
-import RateComparison from './components/RateComparison'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+// Import your existing pages
+import Home from './pages/Home';
+
+// Import the compliance pages
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import About from './pages/About';
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const openSendMoney = () => setIsModalOpen(true)
-
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <Navigation onSendMoney={openSendMoney} />
+    <Router>
+      <Routes>
+        {/* Main landing page */}
+        <Route path="/" element={<Home />} />
 
-     {/* Hero Section */}
-<section className="relative bg-gradient-to-br from-orange-50 via-white to-blue-50 pt-24 pb-16">
-  {/* Decorative background shapes */}
-  <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-200 rounded-full blur-3xl opacity-20"></div>
-    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-20"></div>
-  </div>
-  
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      {/* Left Content */}
-      <HeroContent 
-        onSendMoney={openSendMoney}
-        onViewRates={() => alert('Rates page coming soon!')}
-      />
-      
-      {/* Right Quick Transfer */}
-      <div className="flex justify-center lg:justify-end">
-        <QuickTransfer onContinue={openSendMoney} />
-      </div>
-    </div>
-  </div>
-</section>
+        {/* Compliance pages - REQUIRED FOR TRANSAK */}
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/about" element={<About />} />
 
-      {/* Features */}
-      <FeatureGrid />
-
-      {/* NEW: Rate Comparison */}
-      <RateComparison />
-
-      {/* How It Works */}
-      <HowItWorks />
-
-      {/* Trust Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Powered by Blockchain Technology
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Behind the scenes, we use USDT stablecoin on the blockchain to move your money quickly and securely. 
-            You don't need to know anything about cryptocurrency - we handle all the complexity so you can focus 
-            on what matters: getting money to your family.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {/* 404 Page - Catch all undefined routes */}
+        <Route path="*" element={
+          <div className="min-h-screen flex items-center justify-center bg-gray-50">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">10K+</div>
-              <div className="text-sm text-gray-600">Happy Customers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">$5M+</div>
-              <div className="text-sm text-gray-600">Money Transferred</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">4.9★</div>
-              <div className="text-sm text-gray-600">App Rating</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">24/7</div>
-              <div className="text-sm text-gray-600">Customer Support</div>
+              <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+              <h2 className="text-2xl font-bold mb-4">Page Not Found</h2>
+              <p className="text-gray-600 mb-8">The page you're looking for doesn't exist.</p>
+              <Link to="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                Go Home
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">💸 SwiftMonday</h3>
-              <p className="text-gray-400">
-                The fastest way to send money to the Philippines.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">Send Money</a></li>
-                <li><a href="#" className="hover:text-white">Track Transfer</a></li>
-                <li><a href="#" className="hover:text-white">Exchange Rates</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">Help Center</a></li>
-                <li><a href="#" className="hover:text-white">Contact Us</a></li>
-                <li><a href="#" className="hover:text-white">Security</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>support@moneyhopper.com</li>
-                <li>1-800-HOPPER</li>
-                <li>Available 24/7</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 SwiftMonday. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-
-      {/* Send Money Modal */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <SendMoneySteps />
-      </Modal>
-    </div>
-  )
+        } />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

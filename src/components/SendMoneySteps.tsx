@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Button from './Button'
+import TransakPayment from './TransakPayment'
 import { userService } from '../services/userService'
 import { EXCHANGE_RATES } from '../services/exchangeRate'
 
@@ -7,6 +8,8 @@ type Step = 'amount' | 'recipient' | 'account' | 'review' | 'payment'
 
 function SendMoneySteps() {
   const [currentStep, setCurrentStep] = useState<Step>('amount')
+  const [showTransak, setShowTransak] = useState(false)
+  const [orderId, setOrderId] = useState('')
   const [formData, setFormData] = useState({
     sendAmount: '',
     receiveAmount: '',
@@ -67,19 +70,19 @@ function SendMoneySteps() {
             <div key={step.id} className="flex-1 flex flex-col items-center relative">
               {/* Connection Line */}
               {index < steps.length - 1 && (
-                <div 
+                <div
                   className={`absolute top-5 left-1/2 w-full h-0.5 ${
                     index < currentStepIndex ? 'bg-orange-500' : 'bg-gray-300'
                   }`}
                   style={{ transform: 'translateX(50%)' }}
                 />
               )}
-              
+
               {/* Step Circle */}
               <div className={`
                 w-10 h-10 rounded-full flex items-center justify-center font-semibold z-10
-                ${index <= currentStepIndex 
-                  ? 'bg-orange-500 text-white shadow-lg' 
+                ${index <= currentStepIndex
+                  ? 'bg-orange-500 text-white shadow-lg'
                   : 'bg-gray-200 text-gray-600'}
               `}>
                 {index <= currentStepIndex && index < currentStepIndex ? (
@@ -90,7 +93,7 @@ function SendMoneySteps() {
                   index + 1
                 )}
               </div>
-              
+
               {/* Step Name */}
               <span className={`mt-2 text-sm font-medium ${
                 index <= currentStepIndex ? 'text-orange-600' : 'text-gray-500'
@@ -120,7 +123,7 @@ function SendMoneySteps() {
                   onChange={(e) => {
                     const amount = e.target.value
                     setFormData({
-                      ...formData, 
+                      ...formData,
                       sendAmount: amount,
                       receiveAmount: calculateReceiveAmount(amount)
                     })
@@ -129,7 +132,7 @@ function SendMoneySteps() {
                   className="w-full pl-12 pr-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
-              
+
               {formData.sendAmount && (
                 <div className="mt-4 p-4 bg-orange-50 rounded-lg border border-orange-200">
                   <div className="flex justify-between text-sm">
@@ -143,8 +146,8 @@ function SendMoneySteps() {
                 </div>
               )}
             </div>
-            <Button 
-              text="Continue" 
+            <Button
+              text="Continue"
               onClick={nextStep}
               variant="primary"
             />
@@ -155,7 +158,7 @@ function SendMoneySteps() {
         {currentStep === 'recipient' && (
           <div>
             <h3 className="text-2xl font-bold mb-6">Who are you sending to?</h3>
-            
+
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Recipient Name
@@ -177,8 +180,8 @@ function SendMoneySteps() {
                 <button
                   onClick={() => setFormData({...formData, recipientMethod: 'gcash'})}
                   className={`p-4 border-2 rounded-lg transition-all ${
-                    formData.recipientMethod === 'gcash' 
-                      ? 'border-orange-500 bg-orange-50' 
+                    formData.recipientMethod === 'gcash'
+                      ? 'border-orange-500 bg-orange-50'
                       : 'border-gray-300 hover:border-gray-400'
                   }`}
                 >
@@ -189,8 +192,8 @@ function SendMoneySteps() {
                 <button
                   onClick={() => setFormData({...formData, recipientMethod: 'bank'})}
                   className={`p-4 border-2 rounded-lg transition-all ${
-                    formData.recipientMethod === 'bank' 
-                      ? 'border-orange-500 bg-orange-50' 
+                    formData.recipientMethod === 'bank'
+                      ? 'border-orange-500 bg-orange-50'
                       : 'border-gray-300 hover:border-gray-400'
                   }`}
                 >
@@ -321,7 +324,7 @@ function SendMoneySteps() {
         {currentStep === 'review' && (
           <div>
             <h3 className="text-2xl font-bold mb-6">Review Your Transfer</h3>
-            
+
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
               <div className="grid grid-cols-2 gap-6">
                 <div>
@@ -335,7 +338,7 @@ function SendMoneySteps() {
                   <div className="text-sm text-gray-500 mt-1">Should arrive in minutes</div>
                 </div>
               </div>
-              
+
               <div className="border-t mt-6 pt-6">
                 <div className="text-sm text-gray-600 mb-1">Sending to</div>
                 <div className="font-semibold">{formData.recipientName}</div>
@@ -367,83 +370,93 @@ function SendMoneySteps() {
 
         {/* Payment Step */}
         {currentStep === 'payment' && (
-          <div className="text-center py-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-100 rounded-full mb-6">
-              <svg className="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Ready for Payment</h3>
-            <p className="text-gray-600 mb-6 max-w-md mx-auto">
-              This is where the Transak widget would appear. For now, we're capturing user intent and email.
-            </p>
-            
-            {/* Temporary Success Message */}
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6 max-w-md mx-auto">
-              <div className="text-green-800">
-                <strong>Success!</strong> We've captured your transfer details and created your account.
-              </div>
-              <div className="text-sm text-green-700 mt-2">
-                Email: {formData.senderEmail}
-              </div>
-            </div>
+          <div className="py-8">
+            {!showTransak ? (
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-100 rounded-full mb-6">
+                  <svg className="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Ready for Payment</h3>
 
-            <Button 
-              text="Complete Demo" 
-              onClick={async () => {
-                try {
-                  // Show loading state
-                  alert('Creating your account...')
-                  
-                  // Create user
-                  const { user, error: userError } = await userService.createUser(
-                    formData.senderEmail,
-                    formData.senderPassword
-                  )
-                  
-                  if (userError) {
-                    alert(`Error creating account: ${userError}`)
-                    return
-                  }
-                  
-                  if (!user) {
-                    alert('Failed to create user')
-                    return
-                  }
-                  
-                  // Create transfer intent
-                  const { intent, error: intentError } = await userService.createTransferIntent(
-                    user.id,
-                    {
-                      sendAmount: Number(formData.sendAmount),
-                      receiveAmount: Number(formData.receiveAmount),
-                      exchangeRate: exchangeRate,
-                      fee: fee,
-                      recipientName: formData.recipientName,
-                      recipientMethod: formData.recipientMethod as 'gcash' | 'bank',
-                      recipientAccount: formData.recipientAccount
+                <div className="bg-gray-50 rounded-lg p-6 mb-6 max-w-md mx-auto">
+                  <div className="text-left space-y-2">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Amount to pay:</span>
+                      <span className="font-bold">${formData.sendAmount} USD</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Recipient gets:</span>
+                      <span className="font-bold text-orange-600">₱{formData.receiveAmount} PHP</span>
+                    </div>
+                  </div>
+                </div>
+
+                <Button
+                  text="Proceed to Payment"
+                  onClick={async () => {
+                    // Generate order ID
+                    const newOrderId = `SM-${Date.now()}-${Math.random().toString(36).substring(2, 11)}`
+                    setOrderId(newOrderId)
+
+                    // Save order to database first
+                    const { user } = await userService.createUser(
+                      formData.senderEmail,
+                      formData.senderPassword
+                    )
+
+                    if (user) {
+                      await userService.createTransferIntent(
+                        user.id,
+                        {
+                          sendAmount: Number(formData.sendAmount),
+                          receiveAmount: Number(formData.receiveAmount),
+                          exchangeRate: EXCHANGE_RATES.USD_TO_PHP,
+                          fee: EXCHANGE_RATES.FEE,
+                          recipientName: formData.recipientName,
+                          recipientMethod: formData.recipientMethod as 'gcash' | 'bank',
+                          recipientAccount: formData.recipientAccount
+                        }
+                      )
                     }
-                  )
-                  
-                  if (intentError) {
-                    alert(`Error saving transfer: ${intentError}`)
-                    return
-                  }
-                  
-                  alert(`
-                    Success! Account created and transfer saved!
-                    
-                    User ID: ${user.id}
-                    Transfer ID: ${intent?.id}
-                    
-                    Check your Supabase dashboard to see the data!
-                  `)
-                } catch (error) {
-                  console.error('Error:', error)
-                  alert('Something went wrong. Please try again.')
-                }
-              }} 
-            />
+
+                    // Show Transak widget
+                    setShowTransak(true)
+                  }}
+                />
+
+                <div className="mt-6 space-y-4">
+                  <p className="text-sm text-gray-600">
+                    You'll be redirected to Transak to complete payment securely
+                  </p>
+                  <div className="flex justify-center gap-4 text-xs text-gray-500">
+                    <span>🔒 Secure</span>
+                    <span>💳 Cards accepted</span>
+                    <span>🏦 Bank transfer</span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <TransakPayment
+                amount={Number(formData.sendAmount)}
+                email={formData.senderEmail}
+                orderId={orderId}
+                onSuccess={(orderData) => {
+                  alert('Payment successful! Your money is on the way.')
+                  console.log('Order data:', orderData)
+                  // Here you would update the transfer status in your database
+                }}
+                onFailure={(error) => {
+                  alert('Payment failed. Please try again.')
+                  console.error('Payment error:', error)
+                  setShowTransak(false)
+                }}
+                onClose={() => {
+                  setShowTransak(false)
+                }}
+              />
+            )}
           </div>
         )}
       </div>
