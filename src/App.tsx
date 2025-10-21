@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Import your existing pages
 import Home from './pages/Home';
+import HowItWorks from './pages/HowItWorks';
 
 // Import the compliance pages
 import Terms from './pages/Terms';
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         {/* Main landing page */}
         <Route path="/" element={<Home />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
 
         {/* Compliance pages - REQUIRED FOR TRANSAK */}
         <Route path="/terms" element={<Terms />} />
