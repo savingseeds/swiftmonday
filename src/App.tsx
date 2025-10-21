@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // Import your existing pages
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
+import RatesAndFees from './pages/RatesAndFees';
+import FAQ from './pages/FAQ';
+import Contact from './pages/Contact';
+import Security from './pages/Security';
 
 // Import the compliance pages
 import Terms from './pages/Terms';
@@ -15,7 +19,13 @@ function App() {
       <Routes>
         {/* Main landing page */}
         <Route path="/" element={<Home />} />
+
+        {/* Information pages */}
         <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/rates" element={<RatesAndFees />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/security" element={<Security />} />
 
         {/* Compliance pages - REQUIRED FOR TRANSAK */}
         <Route path="/terms" element={<Terms />} />
