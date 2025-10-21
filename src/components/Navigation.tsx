@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 interface NavigationProps {
   onSendMoney: () => void
@@ -35,10 +36,10 @@ function Navigation({ onSendMoney }: NavigationProps) {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">Features</a>
-            <a href="#" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">How it Works</a>
-            <a href="#" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">Rates</a>
-            <a href="#" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">Support</a>
+            <Link to="/how-it-works" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">How it Works</Link>
+            <Link to="/rates" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">Rates</Link>
+            <Link to="/faq" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">FAQ</Link>
+            <Link to="/contact" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">Support</Link>
           </div>
 
           {/* Right Side Actions */}

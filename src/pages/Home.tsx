@@ -32,7 +32,7 @@ function Home() {
             {/* Left Content */}
             <HeroContent
               onSendMoney={openSendMoney}
-              onViewRates={() => alert('Rates page coming soon!')}
+              onViewRates={() => {}}
             />
 
             {/* Right Quick Transfer */}
@@ -95,11 +95,12 @@ function Home() {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Services</h4>
+              <h4 className="font-semibold mb-4">Information</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">Send Money</a></li>
-                <li><a href="#" className="hover:text-white">Track Transfer</a></li>
-                <li><a href="#" className="hover:text-white">Exchange Rates</a></li>
+                <li><Link to="/how-it-works" className="hover:text-white">How It Works</Link></li>
+                <li><Link to="/rates" className="hover:text-white">Rates & Fees</Link></li>
+                <li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
+                <li><Link to="/security" className="hover:text-white">Security</Link></li>
               </ul>
             </div>
             <div>
@@ -111,10 +112,10 @@ function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
+              <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
+                <li><Link to="/contact" className="hover:text-white">Contact Us</Link></li>
                 <li>support@swiftmonday.com</li>
-                <li>1-800-HOPPER</li>
                 <li>Available 24/7</li>
               </ul>
             </div>

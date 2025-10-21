@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
+
 interface HeroContentProps {
   onSendMoney: () => void
   onViewRates: () => void
 }
 
-function HeroContent({ onSendMoney, onViewRates }: HeroContentProps) {
+function HeroContent({ onSendMoney }: HeroContentProps) {
   return (
     <div className="max-w-xl">
       {/* Trust Badge */}
@@ -45,12 +47,12 @@ function HeroContent({ onSendMoney, onViewRates }: HeroContentProps) {
             </svg>
           </span>
         </button>
-        <button 
-          onClick={onViewRates}
-          className="bg-white border-2 border-gray-200 text-gray-700 hover:border-orange-500 hover:text-orange-500 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300"
+        <Link
+          to="/rates"
+          className="bg-white border-2 border-gray-200 text-gray-700 hover:border-orange-500 hover:text-orange-500 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 text-center"
         >
           View today's rates
-        </button>
+        </Link>
       </div>
 
       {/* Stats with better design */}
