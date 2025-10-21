@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Eye, CheckCircle, AlertTriangle, FileCheck, Server, Key } from 'lucide-react';
 
@@ -10,8 +11,8 @@ const Security: React.FC = () => {
     },
     {
       icon: Shield,
-      title: 'Licensed & Regulated',
-      description: 'Fully licensed money transmitter, registered with FinCEN and compliant with all federal and state regulations.'
+      title: 'Licensed Partners',
+      description: 'We work with fully licensed and regulated payment processors who are compliant with all financial regulations.'
     },
     {
       icon: Eye,
@@ -37,28 +38,28 @@ const Security: React.FC = () => {
 
   const complianceItems = [
     {
-      title: 'FinCEN Registered',
-      description: 'Money Services Business (MSB) registered with the Financial Crimes Enforcement Network'
+      title: 'Bank Secrecy Act (BSA)',
+      description: 'Committed to full compliance with BSA requirements for financial recordkeeping and reporting'
     },
     {
-      title: 'State Licensed',
-      description: 'Licensed money transmitter in all 50 US states where required'
+      title: 'USA PATRIOT Act',
+      description: 'Following all customer identification and verification requirements to prevent financial crimes'
     },
     {
-      title: 'Bank Secrecy Act',
-      description: 'Full compliance with BSA/AML regulations and reporting requirements'
+      title: 'Anti-Money Laundering (AML)',
+      description: 'Robust AML procedures including transaction monitoring and suspicious activity reporting'
     },
     {
-      title: 'KYC/AML Programs',
-      description: 'Robust Know Your Customer and Anti-Money Laundering procedures'
+      title: 'Know Your Customer (KYC)',
+      description: 'Comprehensive identity verification processes to ensure legitimate use of our platform'
     },
     {
-      title: 'Regular Audits',
-      description: 'Independent third-party security and compliance audits'
+      title: 'OFAC Compliance',
+      description: 'Screening all transactions against OFAC sanctions lists to prevent prohibited transfers'
     },
     {
       title: 'Data Protection',
-      description: 'GDPR and CCPA compliant data handling and storage practices'
+      description: 'CCPA compliant data handling practices respecting user privacy rights'
     }
   ];
 
@@ -69,7 +70,7 @@ const Security: React.FC = () => {
     },
     {
       tip: 'Verify website URL',
-      description: 'Always check that you\'re on swiftmonday.com before logging in'
+      description: 'Always check that you\'re on the legitimate SwiftMonday website before logging in'
     },
     {
       tip: 'Enable 2FA',
@@ -113,7 +114,7 @@ const Security: React.FC = () => {
             Your Security is Our Priority
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We use industry-leading technology and strict compliance measures to keep your money and personal information safe.
+            We use industry-leading technology and work with licensed partners to keep your money and personal information safe.
           </p>
         </div>
 
@@ -142,16 +143,18 @@ const Security: React.FC = () => {
           </div>
         </div>
 
-        {/* Compliance & Licensing */}
+        {/* Our Commitment to Compliance */}
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-            Fully Licensed & Compliant
+            Our Commitment to Compliance
           </h2>
           <p className="text-gray-600 text-center mb-8 max-w-3xl mx-auto">
-            SwiftMonday operates in full compliance with US federal and state regulations.
-            We maintain all required licenses and follow strict security protocols.
+            SwiftMonday is committed to operating in full compliance with all applicable US federal and 
+            state regulations. As an early-stage company, we work with established, fully licensed payment 
+            processors to ensure all transactions meet regulatory requirements while we pursue our own 
+            licensing as we grow.
           </p>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {complianceItems.map((item, index) => (
               <div key={index} className="flex gap-3 items-start">
@@ -162,6 +165,14 @@ const Security: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 p-4 bg-blue-50 border-2 border-blue-200 rounded-lg">
+            <p className="text-sm text-gray-700">
+              <strong>Our Partners:</strong> All payment processing is handled by Transak and other fully 
+              licensed and regulated financial service providers. This ensures that every transaction is 
+              processed in compliance with money transmission laws and regulations.
+            </p>
           </div>
         </div>
 
@@ -174,10 +185,10 @@ const Security: React.FC = () => {
               <p>✓ Your data is encrypted both in transit and at rest</p>
               <p>✓ You can request to view or delete your data at any time</p>
               <p>✓ We only keep data as long as legally required</p>
-              <p>✓ Regular security audits ensure your information stays protected</p>
+              <p>✓ Regular security reviews ensure your information stays protected</p>
             </div>
-            <Link
-              to="/privacy"
+            <Link 
+              to="/privacy" 
               className="inline-block mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
               Read Privacy Policy
@@ -211,7 +222,7 @@ const Security: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900">Fraud Patterns</h3>
-                  <p className="text-sm text-gray-600">Machine learning identifies potential fraud</p>
+                  <p className="text-sm text-gray-600">Monitoring for potential fraud indicators</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -233,10 +244,10 @@ const Security: React.FC = () => {
             Stay Safe: Tips for You
           </h2>
           <p className="text-gray-600 text-center mb-8 max-w-3xl mx-auto">
-            While we work hard to protect you, your security is a partnership.
+            While we work hard to protect you, your security is a partnership. 
             Follow these best practices to keep your account safe.
           </p>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {safetyTips.map((item, index) => (
               <div key={index} className="border-2 border-blue-100 rounded-lg p-4 hover:border-blue-300 transition-colors">
@@ -259,8 +270,8 @@ const Security: React.FC = () => {
             Suspect Fraud or Unauthorized Activity?
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            If you notice anything suspicious on your account or believe you've been targeted
-            by a scam, contact us immediately. Our security team is available 24/7.
+            If you notice anything suspicious on your account or believe you've been targeted 
+            by a scam, contact us immediately. Our security team will investigate and assist you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -278,24 +289,35 @@ const Security: React.FC = () => {
           </div>
         </div>
 
-        {/* Trust Badges */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-8 bg-white rounded-xl shadow-lg px-8 py-6">
+        {/* Trust Indicators */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-8 bg-white rounded-xl shadow-lg px-8 py-6 flex-wrap justify-center">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600">256-bit</div>
               <div className="text-sm text-gray-600">SSL Encryption</div>
             </div>
-            <div className="w-px h-12 bg-gray-300"></div>
+            <div className="w-px h-12 bg-gray-300 hidden sm:block"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">FinCEN</div>
-              <div className="text-sm text-gray-600">Registered MSB</div>
+              <div className="text-3xl font-bold text-blue-600">Licensed</div>
+              <div className="text-sm text-gray-600">Payment Partners</div>
             </div>
-            <div className="w-px h-12 bg-gray-300"></div>
+            <div className="w-px h-12 bg-gray-300 hidden sm:block"></div>
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600">24/7</div>
               <div className="text-sm text-gray-600">Fraud Monitoring</div>
             </div>
           </div>
+        </div>
+
+        {/* Transparency Note */}
+        <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8 text-center">
+          <h3 className="text-xl font-bold text-gray-900 mb-3">Our Commitment to Transparency</h3>
+          <p className="text-gray-700 max-w-3xl mx-auto">
+            As an early-stage startup, we're building SwiftMonday with security and compliance at the core. 
+            We partner with established, licensed financial service providers to ensure every transaction 
+            meets all regulatory requirements. As we grow, we're actively working toward obtaining our own 
+            money transmission licenses to further strengthen our commitment to you.
+          </p>
         </div>
 
         {/* Footer Links */}
