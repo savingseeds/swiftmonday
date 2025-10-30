@@ -175,9 +175,9 @@ const Privacy: React.FC = () => {
               and compliance obligations, resolve disputes, and enforce agreements.
             </p>
             <ul className="space-y-2 text-gray-700">
-              <li className="flex items-start"><span className="text-orange-500 mr-2">•</span>Generally, we retain <strong>transaction records for at least 5 years</strong> to comply with Bank Secrecy Act requirements.</li>
-              <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><strong>Account information may be retained for 7 years</strong> after account closure for audit and compliance purposes.</li>
-              <li className="flex items-start"><span className="text-orange-500 mr-2">•</span>We retain <strong>email communications and support tickets for up to 3 years</strong> for customer service quality and dispute resolution purposes.</li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div>Generally, we retain <strong>transaction records for at least 5 years</strong> to comply with Bank Secrecy Act requirements.</div></li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div><strong>Account information may be retained for 7 years</strong> after account closure for audit and compliance purposes.</div></li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div>We retain <strong>email communications and support tickets for up to 3 years</strong> for customer service quality and dispute resolution purposes.</div></li>
             </ul>
           </div>
 
