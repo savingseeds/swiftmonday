@@ -96,7 +96,7 @@ const Privacy: React.FC = () => {
             </ul>
           </div>
 
-          {/* Sections 3-14 in similar style */}
+          {/* Section 3 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
@@ -110,6 +110,7 @@ const Privacy: React.FC = () => {
             </ul>
           </div>
 
+          {/* Section 4 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
@@ -127,6 +128,7 @@ const Privacy: React.FC = () => {
             </ul>
           </div>
 
+          {/* Section 5 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">5</span>
@@ -149,31 +151,37 @@ const Privacy: React.FC = () => {
             </div>
           </div>
 
+          {/* Section 6 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">6</span>
               International Data Transfers
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              Our partners and vendors may process data in multiple countries, including the Philippines and other
-              jurisdictions with different data-protection laws. We implement safeguards appropriate to the transfer
-              (e.g., contractual protections). By using the Services, you understand that your info may be transferred
+              Our Remittance Providers and compliance vendors may process data in multiple countries, including the Philippines (for PHP payouts) and other
+              jurisdictions that may have different data-protection standards than U.S. law. We use contractual protections such as Standard Contractual Clauses where appropriate to safeguard your information. By using the Services, you understand that your info may be transferred
               to and processed in countries outside your state or country of residence.
             </p>
           </div>
 
+          {/* Section 7 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">7</span>
               Retention
             </h3>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed mb-4">
               We retain personal information as long as necessary to provide the Services, meet legal, tax, audit,
-              and compliance obligations (which may require multi-year retention for financial records), resolve
-              disputes, and enforce agreements.
+              and compliance obligations, resolve disputes, and enforce agreements.
             </p>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start"><span className="text-orange-500 mr-2">•</span>Generally, we retain <strong>transaction records for at least 5 years</strong> to comply with Bank Secrecy Act requirements.</li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><strong>Account information may be retained for 7 years</strong> after account closure for audit and compliance purposes.</li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2">•</span>We retain <strong>email communications and support tickets for up to 3 years</strong> for customer service quality and dispute resolution purposes.</li>
+            </ul>
           </div>
 
+          {/* Section 8 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">8</span>
@@ -187,7 +195,7 @@ const Privacy: React.FC = () => {
                 <strong className="text-gray-900">Opt-Out of Marketing.</strong> You may opt out of marketing emails by using unsubscribe links or emailing us.
               </div>
               <div>
-                <strong className="text-gray-900">Cookies/Tracking.</strong> Manage cookies through your browser or device settings; some features may not function if disabled.
+                <strong className="text-gray-900">Cookies/Tracking.</strong> We use essential cookies (required for functionality), analytics cookies (to understand usage patterns), and performance cookies (to optimize the Services). You can manage non-essential cookies through your browser or device settings; some features may not function if essential cookies are disabled.
               </div>
               <div>
                 <strong className="text-gray-900">Do Not Track.</strong> We do not respond to Do Not Track signals. We honor legally required opt-outs where applicable.
@@ -195,6 +203,7 @@ const Privacy: React.FC = () => {
             </div>
           </div>
 
+          {/* Section 9 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">9</span>
@@ -207,6 +216,7 @@ const Privacy: React.FC = () => {
             </p>
           </div>
 
+          {/* Section 10 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">10</span>
@@ -218,34 +228,65 @@ const Privacy: React.FC = () => {
             </p>
           </div>
 
+          {/* Section 11 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">11</span>
-              Third-Party Sites & Services
+              Data Breach Notification
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              The Services may link to third-party websites or integrations (including Remittance Providers).
-              We are not responsible for third-party practices. Review their privacy notices for details.
+              In the event of a data breach that affects your personal information, we will notify you and applicable regulators as required by law. Notification may be provided via email, account notice, or other appropriate means.
             </p>
           </div>
 
+          {/* Section 12 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">12</span>
-              State-Specific Disclosures
+              Third-Party Sites & Services
             </h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The Services integrate with third-party Remittance Providers (such as Transak for payment processing and Coins.ph for PHP payouts) who operate under their own privacy policies. When you initiate a transfer, you will be subject to the Remittance Provider's privacy practices for their services. We encourage you to review their privacy policies.
+            </p>
             <p className="text-gray-700 leading-relaxed">
-              Depending on your state (e.g., CA, CO, CT, UT, VA), you may have additional rights, such as access,
-              deletion, and portability. Certain financial information processed for AML/KYC, fraud prevention,
-              or to comply with law may be exempt. If applicable, you may exercise rights via privacy@swiftmonday.com.
-              We do not sell personal information or share it for cross-context behavioral advertising as those terms
-              are defined by California law; if that changes, we will update this policy and offer required opt-outs.
+              The Services may also link to other third-party websites or integrations. We are not responsible for third-party practices. Review their privacy notices for details.
             </p>
           </div>
 
+          {/* Section 13 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
               <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">13</span>
+              State-Specific Disclosures
+            </h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Depending on your state (e.g., CA, CO, CT, UT, VA), you may have additional rights, such as access,
+              deletion, and portability. Certain financial information processed for AML/KYC, fraud prevention,
+              or to comply with law may be exempt. If applicable, you may exercise rights via privacy@swiftmonday.com.
+            </p>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <p className="text-gray-800 mb-3"><strong className="text-blue-700">California Residents:</strong> Under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA), you have the right to:</p>
+              <ul className="space-y-2 text-gray-800">
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span>Know what personal information we collect and how we use it</li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span>Request deletion of your personal information (subject to legal exceptions for AML/KYC compliance and fraud prevention)</li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span>Opt out of the sale or sharing of personal information</li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span>Correct inaccurate personal information</li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span>Limit use of sensitive personal information</li>
+              </ul>
+              <p className="text-gray-800 mt-3">
+                To exercise these rights, email privacy@swiftmonday.com with your request. We will respond within the timeframes required by law. We will not discriminate against you for exercising your CCPA/CPRA rights.
+              </p>
+            </div>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              We do not sell personal information or share it for cross-context behavioral advertising as those terms
+              are defined by California law. If that changes, we will update this policy and offer required opt-outs.
+            </p>
+          </div>
+
+          {/* Section 14 */}
+          <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+              <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">14</span>
               Changes to this Privacy Policy
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -255,16 +296,17 @@ const Privacy: React.FC = () => {
             </p>
           </div>
 
+          {/* Section 15 */}
           <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-              <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">14</span>
+              <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">15</span>
               Contact Us
             </h3>
             <div className="bg-orange-50 rounded-lg p-4">
               <p className="text-gray-800">
                 <strong>Privacy Questions/Requests:</strong> privacy@swiftmonday.com<br />
                 <strong>Security Reports:</strong> security@swiftmonday.com<br />
-                <strong>Mailing Address:</strong> [Insert Company Mailing Address]
+                <strong>Mailing Address:</strong> [Your Registered Business Address - To Be Added]
               </p>
             </div>
           </div>
