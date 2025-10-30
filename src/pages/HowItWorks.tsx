@@ -65,82 +65,58 @@ const HowItWorks: React.FC = () => {
             Our streamlined process gets your money to the Philippines quickly and securely:
           </p>
 
-          <div className="space-y-6">
-            {/* Step 1 */}
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-5 rounded">
-              <div className="flex items-start gap-3">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Enter Transfer Amount</h3>
-                  <p className="text-gray-700 mb-2">
-                    Tell us how much you want to send in USD. We'll instantly show you the estimated amount
-                    your recipient will receive in Philippine pesos (PHP), including our exchange rate and fees.
-                  </p>
-                  <p className="text-sm text-blue-700 font-semibold">⏱️ Takes about 30 seconds</p>
-                </div>
-              </div>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+              <h3 className="font-bold text-gray-900 mb-2">Step 1: Enter Transfer Amount</h3>
+              <p className="text-sm text-gray-700 mb-2">
+                Tell us how much you want to send in USD. We'll instantly show you the estimated amount
+                your recipient will receive in Philippine pesos (PHP), including our exchange rate and fees.
+              </p>
+              <p className="text-sm text-blue-700 font-semibold">⏱️ Takes about 30 seconds</p>
             </div>
 
-            {/* Step 2 */}
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-5 rounded">
-              <div className="flex items-start gap-3">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Provide Recipient & Payment Details</h3>
-                  <p className="text-gray-700 mb-2">
-                    Enter your recipient's information (name, contact details, delivery method preference) and
-                    select how you'd like to pay. We accept debit cards, credit cards, and bank transfers through
-                    our secure payment partners.
-                  </p>
-                  <p className="text-sm text-gray-600 mb-2">
-                    <strong>First-time users:</strong> You'll complete a quick identity verification process
-                    (required by law for all money transfers). Have a government-issued ID ready.
-                  </p>
-                  <p className="text-sm text-blue-700 font-semibold">⏱️ Takes 1-3 minutes (first transfer may take 5-10 minutes for verification)</p>
-                </div>
-              </div>
+            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+              <h3 className="font-bold text-gray-900 mb-2">Step 2: Provide Recipient & Payment Details</h3>
+              <p className="text-sm text-gray-700 mb-2">
+                Enter your recipient's information (name, contact details, delivery method preference) and
+                select how you'd like to pay. We accept debit cards, credit cards, and bank transfers through
+                our secure payment partners.
+              </p>
+              <p className="text-sm text-gray-600 mb-2">
+                <strong>First-time users:</strong> You'll complete a quick identity verification process
+                (required by law for all money transfers). Have a government-issued ID ready.
+              </p>
+              <p className="text-sm text-blue-700 font-semibold">⏱️ Takes 1-3 minutes (first transfer may take 5-10 minutes for verification)</p>
             </div>
 
-            {/* Step 3 */}
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-5 rounded">
-              <div className="flex items-start gap-3">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Review & Confirm</h3>
-                  <p className="text-gray-700 mb-2">
-                    Before you confirm, you'll see a complete disclosure showing:
-                  </p>
-                  <ul className="space-y-1 text-gray-700 text-sm mb-2">
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exact amount you're sending (USD)</div></li>
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exchange rate being applied</div></li>
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>All fees (platform fee, payment processing fee if applicable)</div></li>
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Total amount charged to your payment method</div></li>
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exact amount recipient will receive (PHP)</div></li>
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Estimated delivery time</div></li>
-                  </ul>
-                  <p className="text-sm text-blue-700 font-semibold">⏱️ Review takes 30 seconds—no surprises, complete transparency</p>
-                </div>
-              </div>
+            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+              <h3 className="font-bold text-gray-900 mb-2">Step 3: Review & Confirm</h3>
+              <p className="text-sm text-gray-700 mb-2">
+                Before you confirm, you'll see a complete disclosure showing:
+              </p>
+              <ul className="space-y-1 text-gray-700 text-sm mb-2">
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exact amount you're sending (USD)</div></li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exchange rate being applied</div></li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>All fees (platform fee, payment processing fee if applicable)</div></li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Total amount charged to your payment method</div></li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exact amount recipient will receive (PHP)</div></li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Estimated delivery time</div></li>
+              </ul>
+              <p className="text-sm text-blue-700 font-semibold">⏱️ Review takes 30 seconds—no surprises, complete transparency</p>
             </div>
 
-            {/* Step 4 */}
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-5 rounded">
-              <div className="flex items-start gap-3">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">We Process & Deliver Your Transfer</h3>
-                  <p className="text-gray-700 mb-2">
-                    Once you confirm:
-                  </p>
-                  <ul className="space-y-1 text-gray-700 text-sm mb-2">
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Our licensed payment partner securely processes your USD payment</div></li>
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>The funds are converted from USD to PHP at the rate you confirmed</div></li>
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Our remittance provider in the Philippines delivers the money via your chosen method (bank deposit, e-wallet, or cash pickup)</div></li>
-                    <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>You can track the status in real-time through your SwiftMonday account</div></li>
-                  </ul>
-                  <p className="text-sm text-blue-700 font-semibold">⏱️ Typical delivery: Minutes to a few hours (may vary by method and verification)</p>
-                </div>
-              </div>
+            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+              <h3 className="font-bold text-gray-900 mb-2">Step 4: We Process & Deliver Your Transfer</h3>
+              <p className="text-sm text-gray-700 mb-2">
+                Once you confirm:
+              </p>
+              <ul className="space-y-1 text-gray-700 text-sm mb-2">
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Our licensed payment partner securely processes your USD payment</div></li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>The funds are converted from USD to PHP at the rate you confirmed</div></li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Our remittance provider in the Philippines delivers the money via your chosen method (bank deposit, e-wallet, or cash pickup)</div></li>
+                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>You can track the status in real-time through your SwiftMonday account</div></li>
+              </ul>
+              <p className="text-sm text-blue-700 font-semibold">⏱️ Typical delivery: Minutes to a few hours (may vary by method and verification)</p>
             </div>
           </div>
         </div>
@@ -300,37 +276,25 @@ const HowItWorks: React.FC = () => {
             Here's what you'll need to get started:
           </p>
 
-          <div className="space-y-3">
-            <div className="flex items-start gap-3 border-l-4 border-green-500 bg-green-50 p-4 rounded">
-              <span className="text-green-600 text-xl font-bold">✓</span>
-              <div>
-                <h3 className="font-bold text-gray-900">Valid Government-Issued ID</h3>
-                <p className="text-sm text-gray-700">Driver's license, passport, or state-issued identification card. You'll upload a photo of your ID during verification.</p>
-              </div>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+              <h3 className="font-bold text-gray-900 mb-2">✓ Valid Government-Issued ID</h3>
+              <p className="text-sm text-gray-700">Driver's license, passport, or state-issued identification card. You'll upload a photo of your ID during verification.</p>
             </div>
 
-            <div className="flex items-start gap-3 border-l-4 border-green-500 bg-green-50 p-4 rounded">
-              <span className="text-green-600 text-xl font-bold">✓</span>
-              <div>
-                <h3 className="font-bold text-gray-900">Payment Method</h3>
-                <p className="text-sm text-gray-700">Debit card, credit card, or bank account information. We accept Visa, Mastercard, and major U.S. banks.</p>
-              </div>
+            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+              <h3 className="font-bold text-gray-900 mb-2">✓ Payment Method</h3>
+              <p className="text-sm text-gray-700">Debit card, credit card, or bank account information. We accept Visa, Mastercard, and major U.S. banks.</p>
             </div>
 
-            <div className="flex items-start gap-3 border-l-4 border-green-500 bg-green-50 p-4 rounded">
-              <span className="text-green-600 text-xl font-bold">✓</span>
-              <div>
-                <h3 className="font-bold text-gray-900">Recipient Information</h3>
-                <p className="text-sm text-gray-700">Your recipient's full name (as it appears on their ID or account), phone number, and delivery method preference (bank account details, e-wallet number, or pickup location preference).</p>
-              </div>
+            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+              <h3 className="font-bold text-gray-900 mb-2">✓ Recipient Information</h3>
+              <p className="text-sm text-gray-700">Your recipient's full name (as it appears on their ID or account), phone number, and delivery method preference (bank account details, e-wallet number, or pickup location preference).</p>
             </div>
 
-            <div className="flex items-start gap-3 border-l-4 border-green-500 bg-green-50 p-4 rounded">
-              <span className="text-green-600 text-xl font-bold">✓</span>
-              <div>
-                <h3 className="font-bold text-gray-900">Your Contact Information</h3>
-                <p className="text-sm text-gray-700">Email address and phone number for transaction updates and security notifications.</p>
-              </div>
+            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+              <h3 className="font-bold text-gray-900 mb-2">✓ Your Contact Information</h3>
+              <p className="text-sm text-gray-700">Email address and phone number for transaction updates and security notifications.</p>
             </div>
           </div>
 
