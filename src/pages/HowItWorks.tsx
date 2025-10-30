@@ -9,7 +9,7 @@ const HowItWorks: React.FC = () => {
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-          <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700">
+          <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-orange-700">
             SwiftMonday
           </Link>
         </div>
@@ -36,7 +36,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 1: Overview */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
             What Is SwiftMonday?
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -44,13 +44,13 @@ const HowItWorks: React.FC = () => {
             to send money from the U.S. to the Philippines. We make international remittances simple, transparent,
             and secure.
           </p>
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-            <p className="text-gray-800 mb-2"><strong className="text-blue-700">Important to Know:</strong></p>
+          <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
+            <p className="text-gray-800 mb-2"><strong className="text-orange-700">Important to Know:</strong></p>
             <ul className="space-y-2 text-gray-800">
-              <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div>SwiftMonday <strong>does not hold or custody customer funds</strong></div></li>
-              <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div>We <strong>do not process payments or conduct money transmission</strong></div></li>
-              <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div>All regulated financial activities are performed by <strong>licensed third-party Remittance Providers</strong></div></li>
-              <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div>Your transfer is subject to the provider's terms, disclosures, and regulatory protections</div></li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div>SwiftMonday <strong>does not hold or custody customer funds</strong></div></li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div>We <strong>do not process payments or conduct money transmission</strong></div></li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div>All regulated financial activities are performed by <strong>licensed third-party Remittance Providers</strong></div></li>
+              <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div>Your transfer is subject to the provider's terms, disclosures, and regulatory protections</div></li>
             </ul>
           </div>
         </div>
@@ -58,7 +58,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 2: Four Simple Steps */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
             Four Simple Steps to Send Money
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
@@ -66,16 +66,16 @@ const HowItWorks: React.FC = () => {
           </p>
 
           <div className="space-y-4">
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">Step 1: Enter Transfer Amount</h3>
               <p className="text-sm text-gray-700 mb-2">
                 Tell us how much you want to send in USD. We'll instantly show you the estimated amount
                 your recipient will receive in Philippine pesos (PHP), including our exchange rate and fees.
               </p>
-              <p className="text-sm text-blue-700 font-semibold">⏱️ Takes about 30 seconds</p>
+              <p className="text-sm text-orange-700 font-semibold">⏱️ Takes about 30 seconds</p>
             </div>
 
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">Step 2: Provide Recipient & Payment Details</h3>
               <p className="text-sm text-gray-700 mb-2">
                 Enter your recipient's information (name, contact details, delivery method preference) and
@@ -86,37 +86,37 @@ const HowItWorks: React.FC = () => {
                 <strong>First-time users:</strong> You'll complete a quick identity verification process
                 (required by law for all money transfers). Have a government-issued ID ready.
               </p>
-              <p className="text-sm text-blue-700 font-semibold">⏱️ Takes 1-3 minutes (first transfer may take 5-10 minutes for verification)</p>
+              <p className="text-sm text-orange-700 font-semibold">⏱️ Takes 1-3 minutes (first transfer may take 5-10 minutes for verification)</p>
             </div>
 
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">Step 3: Review & Confirm</h3>
               <p className="text-sm text-gray-700 mb-2">
                 Before you confirm, you'll see a complete disclosure showing:
               </p>
               <ul className="space-y-1 text-gray-700 text-sm mb-2">
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exact amount you're sending (USD)</div></li>
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exchange rate being applied</div></li>
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>All fees (platform fee, payment processing fee if applicable)</div></li>
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Total amount charged to your payment method</div></li>
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Exact amount recipient will receive (PHP)</div></li>
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Estimated delivery time</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>Exact amount you're sending (USD)</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>Exchange rate being applied</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>All fees (platform fee, payment processing fee if applicable)</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>Total amount charged to your payment method</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>Exact amount recipient will receive (PHP)</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>Estimated delivery time</div></li>
               </ul>
-              <p className="text-sm text-blue-700 font-semibold">⏱️ Review takes 30 seconds—no surprises, complete transparency</p>
+              <p className="text-sm text-orange-700 font-semibold">⏱️ Review takes 30 seconds—no surprises, complete transparency</p>
             </div>
 
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">Step 4: We Process & Deliver Your Transfer</h3>
               <p className="text-sm text-gray-700 mb-2">
                 Once you confirm:
               </p>
               <ul className="space-y-1 text-gray-700 text-sm mb-2">
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Our licensed payment partner securely processes your USD payment</div></li>
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>The funds are converted from USD to PHP at the rate you confirmed</div></li>
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>Our remittance provider in the Philippines delivers the money via your chosen method (bank deposit, e-wallet, or cash pickup)</div></li>
-                <li className="flex items-start"><span className="text-blue-500 mr-2">•</span><div>You can track the status in real-time through your SwiftMonday account</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>Our licensed payment partner securely processes your USD payment</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>The funds are converted from USD to PHP at the rate you confirmed</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>Our remittance provider in the Philippines delivers the money via your chosen method (bank deposit, e-wallet, or cash pickup)</div></li>
+                <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>You can track the status in real-time through your SwiftMonday account</div></li>
               </ul>
-              <p className="text-sm text-blue-700 font-semibold">⏱️ Typical delivery: Minutes to a few hours (may vary by method and verification)</p>
+              <p className="text-sm text-orange-700 font-semibold">⏱️ Typical delivery: Minutes to a few hours (may vary by method and verification)</p>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 3: Delivery Methods */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
             Flexible Delivery Options
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -138,7 +138,7 @@ const HowItWorks: React.FC = () => {
                 Direct deposit to major Philippine banks including BDO, BPI, Metrobank, UnionBank, Security Bank,
                 Landbank, PNB, and more.
               </p>
-              <p className="text-sm text-blue-700 font-semibold">⚡ Delivery: Typically same day; up to 1 business day</p>
+              <p className="text-sm text-orange-700 font-semibold">⚡ Delivery: Typically same day; up to 1 business day</p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-5">
@@ -147,7 +147,7 @@ const HowItWorks: React.FC = () => {
                 Instant transfer to popular e-wallets including GCash, Maya (formerly PayMaya), and Coins.ph wallet.
                 Perfect for recipients who prefer mobile money.
               </p>
-              <p className="text-sm text-blue-700 font-semibold">⚡ Delivery: Typically minutes to a few hours</p>
+              <p className="text-sm text-orange-700 font-semibold">⚡ Delivery: Typically minutes to a few hours</p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-5">
@@ -156,7 +156,7 @@ const HowItWorks: React.FC = () => {
                 Pick up cash at thousands of partner locations nationwide. Available at major remittance centers,
                 pawn shops, and convenience stores across the Philippines.
               </p>
-              <p className="text-sm text-blue-700 font-semibold">⚡ Delivery: Typically 1-4 hours (subject to location operating hours)</p>
+              <p className="text-sm text-orange-700 font-semibold">⚡ Delivery: Typically 1-4 hours (subject to location operating hours)</p>
             </div>
           </div>
 
@@ -172,7 +172,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 4: Pricing Example */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
             Transparent Pricing—See It Before You Send
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -227,7 +227,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 5: Who Powers SwiftMonday */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">5</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">5</span>
             Powered by Trusted, Licensed Partners
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -236,7 +236,7 @@ const HowItWorks: React.FC = () => {
           </p>
 
           <div className="space-y-4">
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+            <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">💳 Transak (Payment Processing & KYC)</h3>
               <p className="text-sm text-gray-700">
                 Transak is our licensed payment processor that securely handles USD payments and identity verification.
@@ -245,7 +245,7 @@ const HowItWorks: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+            <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">🇵🇭 Coins.ph (Philippine Remittance Provider)</h3>
               <p className="text-sm text-gray-700">
                 Coins.ph is a licensed remittance provider in the Philippines that handles the PHP side of your transfer.
@@ -268,7 +268,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 6: First-Time User Checklist */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">6</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">6</span>
             First Time Sending Money? Here's What You Need
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -277,22 +277,22 @@ const HowItWorks: React.FC = () => {
           </p>
 
           <div className="space-y-4">
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">✓ Valid Government-Issued ID</h3>
               <p className="text-sm text-gray-700">Driver's license, passport, or state-issued identification card. You'll upload a photo of your ID during verification.</p>
             </div>
 
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">✓ Payment Method</h3>
               <p className="text-sm text-gray-700">Debit card, credit card, or bank account information. We accept Visa, Mastercard, and major U.S. banks.</p>
             </div>
 
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">✓ Recipient Information</h3>
               <p className="text-sm text-gray-700">Your recipient's full name (as it appears on their ID or account), phone number, and delivery method preference (bank account details, e-wallet number, or pickup location preference).</p>
             </div>
 
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-2">✓ Your Contact Information</h3>
               <p className="text-sm text-gray-700">Email address and phone number for transaction updates and security notifications.</p>
             </div>
@@ -306,7 +306,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 7: Security & Safety */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">7</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">7</span>
             Your Security Is Our Priority
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -314,11 +314,11 @@ const HowItWorks: React.FC = () => {
           </p>
 
           <ul className="space-y-2 text-gray-700">
-            <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div><strong>Bank-Level Encryption:</strong> All data transmitted between your device and our servers uses TLS 1.2+ encryption. Sensitive data at rest is encrypted with AES-256.</div></li>
-            <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div><strong>Licensed Partners Only:</strong> We work exclusively with licensed, regulated payment providers who meet strict security and compliance standards.</div></li>
-            <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div><strong>Two-Factor Authentication:</strong> Protect your account with an extra layer of security using 2FA (available in account settings).</div></li>
-            <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div><strong>Fraud Monitoring:</strong> Real-time transaction monitoring helps detect and prevent suspicious activity before funds are released.</div></li>
-            <li className="flex items-start"><span className="text-blue-500 mr-2 mt-1">•</span><div><strong>Regulatory Compliance:</strong> Our partners comply with Bank Secrecy Act (BSA), USA PATRIOT Act, Anti-Money Laundering (AML), and Know Your Customer (KYC) regulations.</div></li>
+            <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div><strong>Bank-Level Encryption:</strong> All data transmitted between your device and our servers uses TLS 1.2+ encryption. Sensitive data at rest is encrypted with AES-256.</div></li>
+            <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div><strong>Licensed Partners Only:</strong> We work exclusively with licensed, regulated payment providers who meet strict security and compliance standards.</div></li>
+            <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div><strong>Two-Factor Authentication:</strong> Protect your account with an extra layer of security using 2FA (available in account settings).</div></li>
+            <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div><strong>Fraud Monitoring:</strong> Real-time transaction monitoring helps detect and prevent suspicious activity before funds are released.</div></li>
+            <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div><strong>Regulatory Compliance:</strong> Our partners comply with Bank Secrecy Act (BSA), USA PATRIOT Act, Anti-Money Laundering (AML), and Know Your Customer (KYC) regulations.</div></li>
           </ul>
 
           <div className="mt-4">
@@ -331,7 +331,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 8: Tracking Your Transfer */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">8</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">8</span>
             Track Your Transfer in Real-Time
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -339,17 +339,17 @@ const HowItWorks: React.FC = () => {
           </p>
 
           <div className="space-y-3">
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-1">📧 Email & SMS Updates</h3>
               <p className="text-sm text-gray-700">Receive notifications when your payment is received, when conversion happens, and when funds are delivered to your recipient.</p>
             </div>
 
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-1">📱 Account Dashboard</h3>
               <p className="text-sm text-gray-700">Log in to your SwiftMonday account to view transfer status, transaction history, and delivery confirmations.</p>
             </div>
 
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
               <h3 className="font-bold text-gray-900 mb-1">📄 Digital Receipt</h3>
               <p className="text-sm text-gray-700">Every transfer includes a detailed receipt showing all transaction details, fees, exchange rate, and a unique tracking number.</p>
             </div>
@@ -359,7 +359,7 @@ const HowItWorks: React.FC = () => {
         {/* Section 9: Common Questions */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">9</span>
+            <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">9</span>
             Common Questions
           </h2>
 
@@ -406,7 +406,7 @@ const HowItWorks: React.FC = () => {
           </p>
           <Link
             to="/"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg"
+            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-50 transition-colors shadow-lg"
           >
             Start Your First Transfer
           </Link>
@@ -444,8 +444,8 @@ const HowItWorks: React.FC = () => {
               that specific remittance transfer.
             </p>
             <p>
-              See our <Link to="/terms" className="text-blue-700 underline font-semibold">Terms of Service</Link> and{" "}
-              <Link to="/privacy" className="text-blue-700 underline font-semibold">Privacy Policy</Link> for complete details.
+              See our <Link to="/terms" className="text-orange-700 underline font-semibold">Terms of Service</Link> and{" "}
+              <Link to="/privacy" className="text-orange-700 underline font-semibold">Privacy Policy</Link> for complete details.
             </p>
           </div>
         </div>
