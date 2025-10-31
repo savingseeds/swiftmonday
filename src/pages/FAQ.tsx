@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, ChevronUp, HelpCircle, Search } from 'lucide-react';
+import { ChevronDown, ChevronUp, Search } from 'lucide-react';
+import Navigation from '../components/Navigation';
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -174,30 +175,29 @@ const FAQ: React.FC = () => {
   let questionIndex = 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700">
-            SwiftMonday
-          </Link>
-        </div>
-      </div>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <Navigation onSendMoney={() => window.location.href = '/'} />
 
-      {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-4">
-            <HelpCircle className="text-blue-600" size={64} />
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
-          </h1>
+      {/* Hero Header */}
+      <section className="relative bg-gradient-to-br from-orange-50 via-white to-blue-50 pt-32 pb-16">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-200 rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-20"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
           <p className="text-xl text-gray-600">
             Find answers to common questions about sending money with SwiftMonday
           </p>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-lg max-w-none">
 
         {/* Search Bar */}
         <div className="mb-8">
@@ -208,7 +208,7 @@ const FAQ: React.FC = () => {
               placeholder="Search for answers..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none"
+              className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:border-orange-500 focus:outline-none"
             />
           </div>
         </div>
@@ -217,7 +217,7 @@ const FAQ: React.FC = () => {
         <div className="space-y-8">
           {filteredFAQs.map((category, catIndex) => (
             <div key={catIndex} className="bg-white rounded-2xl shadow-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-blue-100">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-orange-100">
                 {category.category}
               </h2>
 
@@ -230,13 +230,13 @@ const FAQ: React.FC = () => {
                     <div key={currentIndex} className="border-b border-gray-100 last:border-b-0">
                       <button
                         onClick={() => toggleQuestion(currentIndex)}
-                        className="w-full py-4 flex items-start justify-between text-left hover:text-blue-600 transition-colors"
+                        className="w-full py-4 flex items-start justify-between text-left hover:text-orange-600 transition-colors"
                       >
                         <span className="font-semibold text-gray-900 pr-4">
                           {item.q}
                         </span>
                         {isOpen ? (
-                          <ChevronUp className="flex-shrink-0 text-blue-600" size={24} />
+                          <ChevronUp className="flex-shrink-0 text-orange-600" size={24} />
                         ) : (
                           <ChevronDown className="flex-shrink-0 text-gray-400" size={24} />
                         )}
@@ -261,7 +261,7 @@ const FAQ: React.FC = () => {
             <p className="text-gray-600 mb-4">No questions match your search.</p>
             <button
               onClick={() => setSearchTerm('')}
-              className="text-blue-600 hover:underline font-semibold"
+              className="text-orange-600 hover:underline font-semibold"
             >
               Clear search
             </button>
@@ -269,7 +269,7 @@ const FAQ: React.FC = () => {
         )}
 
         {/* Still Need Help */}
-        <div className="mt-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-xl p-8 text-white text-center">
+        <div className="mt-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl shadow-xl p-8 text-white text-center">
           <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
           <p className="mb-6">
             Our support team is here to help you 24/7
@@ -277,13 +277,13 @@ const FAQ: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-block bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors"
             >
               Contact Support
             </Link>
             <a
               href="mailto:support@swiftmonday.com"
-              className="inline-block bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
+              className="inline-block bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors"
             >
               Email Us
             </a>
@@ -293,13 +293,15 @@ const FAQ: React.FC = () => {
         {/* Quick Links */}
         <div className="mt-8 text-center">
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link to="/how-it-works" className="text-blue-600 hover:underline">How It Works</Link>
-            <Link to="/rates" className="text-blue-600 hover:underline">Rates & Fees</Link>
-            <Link to="/security" className="text-blue-600 hover:underline">Security</Link>
-            <Link to="/terms" className="text-blue-600 hover:underline">Terms of Service</Link>
+            <Link to="/how-it-works" className="text-orange-600 hover:underline">How It Works</Link>
+            <Link to="/rates" className="text-orange-600 hover:underline">Rates & Fees</Link>
+            <Link to="/security" className="text-orange-600 hover:underline">Security</Link>
+            <Link to="/terms" className="text-orange-600 hover:underline">Terms of Service</Link>
           </div>
         </div>
-      </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
