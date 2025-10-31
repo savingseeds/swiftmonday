@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calculator, TrendingDown, Shield, Clock } from 'lucide-react';
+import Navigation from '../components/Navigation';
 
 const RatesAndFees: React.FC = () => {
   const [sendAmount, setSendAmount] = useState(500);
@@ -73,32 +74,33 @@ const RatesAndFees: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700">
-            SwiftMonday
-          </Link>
-        </div>
-      </div>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <Navigation onSendMoney={() => window.location.href = '/'} />
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Transparent Rates & Fees
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      {/* Hero Header */}
+      <section className="relative bg-gradient-to-br from-orange-50 via-white to-blue-50 pt-32 pb-16">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-200 rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-20"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Transparent Rates & Fees</h1>
+          <p className="text-xl text-gray-600">
             No hidden charges. No surprises. Just honest, competitive pricing.
           </p>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         {/* Interactive Calculator */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <Calculator className="text-blue-600" size={32} />
+            <Calculator className="text-orange-600" size={32} />
             <h2 className="text-2xl font-bold text-gray-900">Fee Calculator</h2>
           </div>
 
@@ -112,7 +114,7 @@ const RatesAndFees: React.FC = () => {
                 type="number"
                 value={sendAmount}
                 onChange={(e) => setSendAmount(Number(e.target.value))}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-2xl font-bold focus:border-blue-500 focus:outline-none"
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-2xl font-bold focus:border-orange-500 focus:outline-none"
                 min="1"
                 max="10000"
               />
@@ -133,11 +135,11 @@ const RatesAndFees: React.FC = () => {
             </div>
 
             {/* Output Section */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6">
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Recipient Gets (PHP)
               </label>
-              <div className="text-4xl font-bold text-blue-600 mb-4">
+              <div className="text-4xl font-bold text-orange-600 mb-4">
                 ₱{receivedAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </div>
               <div className="space-y-2 text-sm">
@@ -184,7 +186,7 @@ const RatesAndFees: React.FC = () => {
                     key={index}
                     className={`border-b border-gray-100 ${
                       competitor.highlight
-                        ? 'bg-blue-50 font-semibold'
+                        ? 'bg-orange-50 font-semibold'
                         : 'hover:bg-gray-50'
                     }`}
                   >
@@ -200,7 +202,7 @@ const RatesAndFees: React.FC = () => {
                     <td className="text-right py-4 px-4">₱{competitor.rate}</td>
                     <td className="text-right py-4 px-4 text-sm">{competitor.speed}</td>
                     <td className={`text-right py-4 px-4 font-bold ${
-                      competitor.highlight ? 'text-blue-600' : 'text-gray-900'
+                      competitor.highlight ? 'text-orange-600' : 'text-gray-900'
                     }`}>
                       ₱{parseFloat(competitor.received).toLocaleString('en-US', { minimumFractionDigits: 2 })}
                     </td>
@@ -227,7 +229,7 @@ const RatesAndFees: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {feeStructure.map((tier, index) => (
-              <div key={index} className="border-2 border-blue-100 rounded-lg p-4 hover:border-blue-300 transition-colors">
+              <div key={index} className="border-2 border-orange-100 rounded-lg p-4 hover:border-orange-300 transition-colors">
                 <div className="text-lg font-bold text-gray-900 mb-2">{tier.range}</div>
                 <div className="space-y-1 text-sm">
                   <div className="flex justify-between">
@@ -247,7 +249,7 @@ const RatesAndFees: React.FC = () => {
         {/* Why Our Pricing */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="bg-white rounded-xl p-6 shadow-lg">
-            <TrendingDown className="text-blue-600 mb-4" size={40} />
+            <TrendingDown className="text-orange-600 mb-4" size={40} />
             <h3 className="text-xl font-bold text-gray-900 mb-2">Low Fees</h3>
             <p className="text-gray-600">
               Our technology lets us keep costs down and pass the savings to you.
@@ -255,7 +257,7 @@ const RatesAndFees: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-lg">
-            <Shield className="text-blue-600 mb-4" size={40} />
+            <Shield className="text-orange-600 mb-4" size={40} />
             <h3 className="text-xl font-bold text-gray-900 mb-2">No Hidden Charges</h3>
             <p className="text-gray-600">
               What you see is what you pay. No surprise fees at the end.
@@ -263,7 +265,7 @@ const RatesAndFees: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-lg">
-            <Clock className="text-blue-600 mb-4" size={40} />
+            <Clock className="text-orange-600 mb-4" size={40} />
             <h3 className="text-xl font-bold text-gray-900 mb-2">Real-Time Rates</h3>
             <p className="text-gray-600">
               Our rates update every few minutes to give you the best value.
@@ -275,7 +277,7 @@ const RatesAndFees: React.FC = () => {
         <div className="text-center">
           <Link
             to="/"
-            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
+            className="inline-block bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-700 transition-colors shadow-lg"
           >
             Start Your Transfer Now →
           </Link>
@@ -284,12 +286,13 @@ const RatesAndFees: React.FC = () => {
         {/* Footer Links */}
         <div className="mt-16 pt-8 border-t border-gray-200 text-center">
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link to="/how-it-works" className="text-blue-600 hover:underline">How It Works</Link>
-            <Link to="/faq" className="text-blue-600 hover:underline">FAQ</Link>
-            <Link to="/contact" className="text-blue-600 hover:underline">Contact Support</Link>
+            <Link to="/how-it-works" className="text-orange-600 hover:underline">How It Works</Link>
+            <Link to="/faq" className="text-orange-600 hover:underline">FAQ</Link>
+            <Link to="/contact" className="text-orange-600 hover:underline">Contact Support</Link>
           </div>
         </div>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
