@@ -1,38 +1,31 @@
 // Security.tsx
-import React from "react";
-import { Link } from "react-router-dom";
-import { Shield } from "lucide-react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
 
 const Security: React.FC = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-          <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-orange-700">
-            SwiftMonday
-          </Link>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <Navigation onSendMoney={() => window.location.href = '/'} />
+
+      {/* Hero Header */}
+      <section className="relative bg-gradient-to-br from-orange-50 via-white to-blue-50 pt-32 pb-16">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-200 rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-20"></div>
         </div>
-      </header>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Security & Trust</h1>
+          <p className="text-xl text-gray-600">Last Updated: October 30, 2025</p>
+        </div>
+      </section>
 
       {/* Main Content */}
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-6">
-            <div className="bg-blue-600 p-6 rounded-full">
-              <Shield className="text-white" size={64} />
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Security & Trust
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your security is our priority. We implement industry-leading safeguards and work exclusively
-            with licensed, regulated partners to protect your information and transactions.
-          </p>
-          <p className="text-sm text-gray-500 mt-4">Last updated: October 30, 2025</p>
-        </div>
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-lg max-w-none">
 
         {/* Section 1: Platform Security Architecture */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
@@ -183,7 +176,7 @@ const Security: React.FC = () => {
             <li className="flex items-start"><span className="text-orange-500 mr-2 mt-1">•</span><div><strong>California Privacy Rights:</strong> California residents have additional rights under CCPA/CPRA including the right to know, delete, correct, and opt-out of data sharing.</div></li>
           </ul>
           <div className="mt-4">
-            <Link to="/privacy" className="text-blue-600 hover:underline font-semibold">
+            <Link to="/privacy" className="text-orange-600 hover:underline font-semibold">
               Read our complete Privacy Policy →
             </Link>
           </div>
@@ -319,7 +312,7 @@ const Security: React.FC = () => {
                   <li className="flex items-start"><span className="text-red-500 mr-2">1.</span><div>Change your password immediately</div></li>
                   <li className="flex items-start"><span className="text-red-500 mr-2">2.</span><div>Enable 2FA if not already active</div></li>
                   <li className="flex items-start"><span className="text-red-500 mr-2">3.</span><div>Log out from all devices</div></li>
-                  <li className="flex items-start"><span className="text-red-500 mr-2">4.</span><div>Contact our security team at <a href="mailto:security@swiftmonday.com" className="text-blue-600 hover:underline">security@swiftmonday.com</a></div></li>
+                  <li className="flex items-start"><span className="text-red-500 mr-2">4.</span><div>Contact our security team at <a href="mailto:security@swiftmonday.com" className="text-orange-600 hover:underline">security@swiftmonday.com</a></div></li>
                   <li className="flex items-start"><span className="text-red-500 mr-2">5.</span><div>Document details of suspicious activity (timestamps, descriptions, screenshots if applicable)</div></li>
                 </ul>
               </div>
@@ -329,10 +322,10 @@ const Security: React.FC = () => {
               <h3 className="text-lg font-bold text-gray-900 mb-2">Responsible Vulnerability Disclosure</h3>
               <p className="text-gray-700 mb-3">
                 If you discover a security vulnerability in our platform, we appreciate responsible disclosure.
-                Please report it to <a href="mailto:security@swiftmonday.com" className="text-blue-600 hover:underline font-semibold">security@swiftmonday.com</a> rather
+                Please report it to <a href="mailto:security@swiftmonday.com" className="text-orange-600 hover:underline font-semibold">security@swiftmonday.com</a> rather
                 than publicly disclosing it.
               </p>
-              <div className="bg-orange-50 border border-blue-200 p-4 rounded">
+              <div className="bg-orange-50 border border-orange-200 p-4 rounded">
                 <p className="text-sm text-gray-700 mb-2"><strong>What to Include in Your Report:</strong></p>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li className="flex items-start"><span className="text-orange-500 mr-2">•</span><div>Detailed description of the vulnerability</div></li>
@@ -352,7 +345,7 @@ const Security: React.FC = () => {
             <div className="text-center pt-4">
               <Link
                 to="/contact"
-                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Contact Support
               </Link>
@@ -361,26 +354,26 @@ const Security: React.FC = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mb-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-white text-center">
+        <div className="mb-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-8 text-white text-center">
           <h3 className="text-2xl font-bold mb-6">Security at a Glance</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <div className="text-4xl font-bold mb-2">TLS 1.2+</div>
-              <div className="text-blue-100">Encryption in Transit</div>
+              <div className="text-orange-100">Encryption in Transit</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">AES-256</div>
-              <div className="text-blue-100">Encryption at Rest</div>
+              <div className="text-orange-100">Encryption at Rest</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-blue-100">Security Monitoring</div>
+              <div className="text-orange-100">Security Monitoring</div>
             </div>
           </div>
         </div>
 
         {/* Transparency Statement */}
-        <div className="mb-12 bg-orange-50 border-2 border-blue-200 rounded-xl p-6 text-center">
+        <div className="mb-12 bg-orange-50 border-2 border-orange-200 rounded-xl p-6 text-center">
           <h3 className="text-xl font-bold text-gray-900 mb-3">Our Commitment to Transparency</h3>
           <p className="text-gray-700 max-w-3xl mx-auto">
             SwiftMonday is building a remittance platform with security and compliance at its core. We operate as a
@@ -395,20 +388,22 @@ const Security: React.FC = () => {
         <footer className="mt-12 pt-8 border-t border-gray-200">
           <div className="text-center space-y-4">
             <nav className="flex flex-wrap justify-center gap-6 text-sm">
-              <Link to="/how-it-works" className="text-blue-600 hover:underline">How It Works</Link>
-              <Link to="/rates" className="text-blue-600 hover:underline">Rates & Fees</Link>
-              <Link to="/faq" className="text-blue-600 hover:underline">FAQ</Link>
-              <Link to="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>
-              <Link to="/terms" className="text-blue-600 hover:underline">Terms of Service</Link>
-              <Link to="/contact" className="text-blue-600 hover:underline">Contact</Link>
+              <Link to="/how-it-works" className="text-orange-600 hover:underline">How It Works</Link>
+              <Link to="/rates" className="text-orange-600 hover:underline">Rates & Fees</Link>
+              <Link to="/faq" className="text-orange-600 hover:underline">FAQ</Link>
+              <Link to="/privacy" className="text-orange-600 hover:underline">Privacy Policy</Link>
+              <Link to="/terms" className="text-orange-600 hover:underline">Terms of Service</Link>
+              <Link to="/contact" className="text-orange-600 hover:underline">Contact</Link>
             </nav>
             <p className="text-sm text-gray-600">
-              Questions about security? Email us at <a href="mailto:security@swiftmonday.com" className="text-blue-600 hover:underline">security@swiftmonday.com</a>
+              Questions about security? Email us at <a href="mailto:security@swiftmonday.com" className="text-orange-600 hover:underline">security@swiftmonday.com</a>
             </p>
           </div>
         </footer>
-      </div>
-    </main>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

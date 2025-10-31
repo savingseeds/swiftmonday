@@ -1,37 +1,34 @@
 // HowItWorks.tsx
 import React from "react";
 import { Link } from "react-router-dom";
-import { Send } from "lucide-react";
+import Navigation from '../components/Navigation';
 
 const HowItWorks: React.FC = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-          <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-orange-700">
-            SwiftMonday
-          </Link>
-        </div>
-      </header>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <Navigation onSendMoney={() => window.location.href = '/'} />
 
-      {/* Main Content */}
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-6">
-            <div className="bg-blue-600 p-6 rounded-full">
-              <Send className="text-white" size={64} />
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            How SwiftMonday Works
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      {/* Hero Header */}
+      <section className="relative bg-gradient-to-br from-orange-50 via-white to-blue-50 pt-32 pb-16">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-200 rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-20"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">How SwiftMonday Works</h1>
+          <p className="text-xl text-gray-600">
             Send money from the United States to the Philippines in four simple steps.
             Fast, secure, and transparent—with complete pricing shown before you confirm.
           </p>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-lg max-w-none">
 
         {/* Section 1: Overview */}
         <div className="mb-12 bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
@@ -179,9 +176,9 @@ const HowItWorks: React.FC = () => {
             We believe in complete transparency. Here's an example of what you'll see before confirming your transfer:
           </p>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-200">
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border-2 border-orange-200">
             <div className="text-center mb-4">
-              <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-bold text-lg mb-2">
+              <div className="inline-block bg-orange-600 text-white px-4 py-2 rounded-lg font-bold text-lg mb-2">
                 Example: $100 USD Transfer
               </div>
             </div>
@@ -190,7 +187,7 @@ const HowItWorks: React.FC = () => {
                 <span className="text-gray-700">Amount you send:</span>
                 <span className="text-2xl font-bold text-gray-900">$100.00 USD</span>
               </div>
-              <div className="border-t border-blue-200 pt-3 flex justify-between items-center">
+              <div className="border-t border-orange-200 pt-3 flex justify-between items-center">
                 <span className="text-gray-700">SwiftMonday platform fee:</span>
                 <span className="font-semibold text-gray-900">$2.99</span>
               </div>
@@ -202,13 +199,13 @@ const HowItWorks: React.FC = () => {
                 <span className="text-gray-700">Amount converted to PHP:</span>
                 <span className="font-semibold text-gray-900">$97.01 × 56.50 = ₱5,481.07</span>
               </div>
-              <div className="border-t-2 border-blue-400 pt-3 flex justify-between items-center">
+              <div className="border-t-2 border-orange-400 pt-3 flex justify-between items-center">
                 <span className="text-gray-700 font-bold">Total you pay:</span>
                 <span className="text-xl font-bold text-gray-900">$100.00 USD</span>
               </div>
-              <div className="border-t-2 border-blue-400 pt-3 flex justify-between items-center">
+              <div className="border-t-2 border-orange-400 pt-3 flex justify-between items-center">
                 <span className="text-gray-700 font-bold">Recipient gets:</span>
-                <span className="text-2xl font-bold text-blue-600">₱5,481.07 PHP</span>
+                <span className="text-2xl font-bold text-orange-600">₱5,481.07 PHP</span>
               </div>
             </div>
             <p className="text-xs text-gray-600 text-center mt-4">
@@ -218,7 +215,7 @@ const HowItWorks: React.FC = () => {
           </div>
 
           <div className="mt-6 text-center">
-            <Link to="/rates" className="text-blue-600 hover:underline font-semibold text-lg">
+            <Link to="/rates" className="text-orange-600 hover:underline font-semibold text-lg">
               View current rates and calculate your exact transfer →
             </Link>
           </div>
@@ -322,7 +319,7 @@ const HowItWorks: React.FC = () => {
           </ul>
 
           <div className="mt-4">
-            <Link to="/security" className="text-blue-600 hover:underline font-semibold">
+            <Link to="/security" className="text-orange-600 hover:underline font-semibold">
               Learn more about our security practices →
             </Link>
           </div>
@@ -391,26 +388,26 @@ const HowItWorks: React.FC = () => {
           </div>
 
           <div className="mt-6 text-center">
-            <Link to="/faq" className="text-blue-600 hover:underline font-semibold">
+            <Link to="/faq" className="text-orange-600 hover:underline font-semibold">
               View all frequently asked questions →
             </Link>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="mb-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-white text-center">
+        <div className="mb-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Send Money?</h2>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-orange-100 mb-6 max-w-2xl mx-auto">
             Join thousands of people sending money to the Philippines with SwiftMonday.
             Fast, secure, and transparent—get started in minutes.
           </p>
           <Link
             to="/"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-50 transition-colors shadow-lg"
+            className="inline-block bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-50 transition-colors shadow-lg"
           >
             Start Your First Transfer
           </Link>
-          <p className="text-blue-100 text-sm mt-4">
+          <p className="text-orange-100 text-sm mt-4">
             No account required to see rates • Identity verification required to send money
           </p>
         </div>
@@ -454,12 +451,12 @@ const HowItWorks: React.FC = () => {
         <footer className="pt-8 border-t border-gray-200">
           <div className="text-center space-y-4">
             <nav className="flex flex-wrap justify-center gap-6 text-sm">
-              <Link to="/rates" className="text-blue-600 hover:underline">Rates & Fees</Link>
-              <Link to="/faq" className="text-blue-600 hover:underline">FAQ</Link>
-              <Link to="/security" className="text-blue-600 hover:underline">Security</Link>
-              <Link to="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>
-              <Link to="/terms" className="text-blue-600 hover:underline">Terms of Service</Link>
-              <Link to="/contact" className="text-blue-600 hover:underline">Contact</Link>
+              <Link to="/rates" className="text-orange-600 hover:underline">Rates & Fees</Link>
+              <Link to="/faq" className="text-orange-600 hover:underline">FAQ</Link>
+              <Link to="/security" className="text-orange-600 hover:underline">Security</Link>
+              <Link to="/privacy" className="text-orange-600 hover:underline">Privacy Policy</Link>
+              <Link to="/terms" className="text-orange-600 hover:underline">Terms of Service</Link>
+              <Link to="/contact" className="text-orange-600 hover:underline">Contact</Link>
             </nav>
             <div className="flex justify-center items-center gap-4 text-xs text-gray-500 flex-wrap">
               <span>🔒 Bank-level encryption (TLS 1.2+ & AES-256)</span>
@@ -470,8 +467,10 @@ const HowItWorks: React.FC = () => {
             </div>
           </div>
         </footer>
-      </div>
-    </main>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
