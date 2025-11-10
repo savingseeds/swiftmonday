@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import HeroContent from '../components/HeroContent'
-import QuickTransfer from '../components/QuickTransfer'
 import FeatureGrid from '../components/FeatureGrid'
 import HowItWorks from '../components/HowItWorks'
 import Modal from '../components/Modal'
@@ -35,9 +34,27 @@ function Home() {
               onViewRates={() => {}}
             />
 
-            {/* Right Quick Transfer */}
+            {/* Right Hero Image */}
             <div className="flex justify-center lg:justify-end">
-              <QuickTransfer onContinue={openSendMoney} />
+              <div className="relative w-full max-w-lg">
+                <img
+                  src="/images/lady1_home.png"
+                  alt="Woman using smartphone to send money to Philippines"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                {/* Optional: Add floating card overlay for visual interest */}
+                <div className="absolute bottom-8 left-8 bg-white rounded-xl shadow-lg p-4 max-w-xs">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">✓</span>
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900">Transfer Complete</div>
+                      <div className="text-xs text-gray-600">₱5,000 received in 2 minutes</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -84,42 +101,83 @@ function Home() {
         </div>
       </section>
 
-      {/* Partner Trust Section - New */}
+      {/* Partner Trust Section with Image */}
       <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8 md:p-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-              Why SwiftMonday?
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8 mt-8">
-              <div className="text-center">
-                <div className="text-4xl mb-3">🔒</div>
-                <h3 className="font-bold text-gray-900 mb-2">Secure & Compliant</h3>
-                <p className="text-sm text-gray-600">
-                  Payment processing and remittance services performed by licensed providers with
-                  full regulatory compliance.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-3">💰</div>
-                <h3 className="font-bold text-gray-900 mb-2">Transparent Pricing</h3>
-                <p className="text-sm text-gray-600">
-                  See exact fees and exchange rates before you confirm. No hidden charges or surprises.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-3">⚡</div>
-                <h3 className="font-bold text-gray-900 mb-2">Fast Transfers</h3>
-                <p className="text-sm text-gray-600">
-                  Modern technology enables quick processing. Many transfers complete within hours.
-                </p>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Image */}
+            <div className="order-2 lg:order-1">
+              <div className="relative w-full max-w-lg mx-auto lg:mx-0">
+                <img
+                  src="/images/man1_home.png"
+                  alt="Man using smartphone for money transfer"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                {/* Floating stats card */}
+                <div className="absolute top-8 right-8 bg-white rounded-xl shadow-lg p-4">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-orange-600">$2.99</div>
+                    <div className="text-xs text-gray-600">Flat fee only</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="mt-8 pt-6 border-t border-blue-300 text-center">
-              <p className="text-sm text-gray-700">
-                <strong>Our Partners:</strong> We work with Transak for payment processing and Coins.ph
-                for PHP delivery—both licensed and regulated to ensure your transfer meets all legal requirements.
+
+            {/* Right: Content */}
+            <div className="order-1 lg:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Why SwiftMonday?
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                We've built a modern platform that connects you with trusted, licensed payment providers.
+                No gimmicks, just transparent pricing and reliable service.
               </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">🔒</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">Secure & Compliant</h3>
+                    <p className="text-sm text-gray-600">
+                      Payment processing and remittance services performed by licensed providers with
+                      full regulatory compliance.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">💰</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">Transparent Pricing</h3>
+                    <p className="text-sm text-gray-600">
+                      See exact fees and exchange rates before you confirm. No hidden charges or surprises.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">⚡</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1">Fast Transfers</h3>
+                    <p className="text-sm text-gray-600">
+                      Modern technology enables quick processing. Many transfers complete within hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-orange-50 border border-orange-200 rounded-xl">
+                <p className="text-sm text-gray-700">
+                  <strong>Our Partners:</strong> We work with Transak for payment processing and Coins.ph
+                  for PHP delivery—both licensed and regulated to ensure your transfer meets all legal requirements.
+                </p>
+              </div>
             </div>
           </div>
         </div>
