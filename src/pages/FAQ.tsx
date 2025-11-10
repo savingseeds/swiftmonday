@@ -21,7 +21,7 @@ const FAQ: React.FC = () => {
         },
         {
           q: 'Is SwiftMonday available in my state?',
-          a: 'SwiftMonday is available in all 50 US states. We\'re licensed and compliant with all federal and state money transmission regulations.'
+          a: 'SwiftMonday is available in all 50 US states. We connect you with licensed payment service providers who handle all regulated financial activities.'
         }
       ]
     },
@@ -122,8 +122,8 @@ const FAQ: React.FC = () => {
       category: 'Security & Trust',
       questions: [
         {
-          q: 'Is SwiftMonday legitimate and licensed?',
-          a: 'Yes! SwiftMonday is a licensed money transmitter operating in compliance with all federal and state regulations. We\'re registered with FinCEN and follow strict security and compliance standards.'
+          q: 'Is SwiftMonday legitimate and safe?',
+          a: 'Yes! SwiftMonday is a software platform that connects you with fully licensed and regulated payment service providers. All regulated financial activities are performed by our licensed partners who maintain strict security and compliance standards.'
         },
         {
           q: 'How do you protect my personal information?',

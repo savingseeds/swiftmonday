@@ -31,8 +31,8 @@ const features = [
   },
   {
     icon: '✅',
-    title: 'Fully Regulated',
-    description: 'Licensed and compliant with US and Philippine financial regulations.',
+    title: 'Trusted Platform',
+    description: 'Built with compliance and security standards in mind for your peace of mind.',
     color: 'bg-indigo-100 text-indigo-600'
   }
 ]

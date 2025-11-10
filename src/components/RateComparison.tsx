@@ -261,8 +261,8 @@ function RateComparison() {
         {/* Trust badges */}
         <div className="flex justify-center items-center gap-8 mt-12">
           <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900">BSP Licensed</div>
-            <div className="text-sm text-gray-600">Regulated by Bangko Sentral</div>
+            <div className="text-2xl font-bold text-gray-900">Licensed Partners</div>
+            <div className="text-sm text-gray-600">Fully regulated providers</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-gray-900">SSL Secured</div>

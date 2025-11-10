@@ -113,17 +113,15 @@ const Footer: React.FC = () => {
               © 2025 SwiftMonday. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm">
-              <span className="text-gray-400">MSB Registration: Pending</span>
-              <span className="text-gray-400">|</span>
-              <span className="text-gray-400">Licensed Money Transmitter</span>
+              <span className="text-gray-400">Platform connecting you with licensed partners</span>
             </div>
           </div>
-          
+
           {/* Compliance Notice */}
           <div className="mt-6 p-4 bg-gray-800 rounded-lg">
             <p className="text-gray-400 text-xs text-center">
-              SwiftMonday is a registered Money Services Business (MSB) with FinCEN. 
-              We comply with all federal and state regulations including the Bank Secrecy Act and USA PATRIOT Act. 
+              SwiftMonday is a software platform that connects you with licensed and regulated payment service providers.
+              All regulated financial activities are performed by our licensed partners under their own regulatory frameworks.
               Your funds are secure and your information is protected with bank-level encryption.
             </p>
           </div>

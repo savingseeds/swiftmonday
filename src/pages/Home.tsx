@@ -52,33 +52,74 @@ function Home() {
       {/* How It Works */}
       <HowItWorks />
 
-      {/* Trust Section */}
+      {/* Trust Section - Updated */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Powered by Blockchain Technology
+            Built on Trusted Infrastructure
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Behind the scenes, we use USDT stablecoin on the blockchain to move your money quickly and securely.
-            You don't need to know anything about cryptocurrency - we handle all the complexity so you can focus
-            on what matters: getting money to your family.
+            SwiftMonday connects you to licensed payment processors and remittance providers who handle
+            all regulated activities. We focus on creating a simple, transparent experience while our
+            partners ensure your money moves safely and compliantly.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">10K+</div>
-              <div className="text-sm text-gray-600">Happy Customers</div>
+              <div className="text-3xl font-bold text-primary">2-4hrs</div>
+              <div className="text-sm text-gray-600">Typical Response Time</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">$5M+</div>
-              <div className="text-sm text-gray-600">Money Transferred</div>
+              <div className="text-3xl font-bold text-primary">Bank-Level</div>
+              <div className="text-sm text-gray-600">Security Standards</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">4.9★</div>
-              <div className="text-sm text-gray-600">App Rating</div>
+              <div className="text-3xl font-bold text-primary">Licensed</div>
+              <div className="text-sm text-gray-600">Partner Network</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">24/7</div>
-              <div className="text-sm text-gray-600">Customer Support</div>
+              <div className="text-sm text-gray-600">Email Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Trust Section - New */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8 md:p-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+              Why SwiftMonday?
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 mt-8">
+              <div className="text-center">
+                <div className="text-4xl mb-3">🔒</div>
+                <h3 className="font-bold text-gray-900 mb-2">Secure & Compliant</h3>
+                <p className="text-sm text-gray-600">
+                  Payment processing and remittance services performed by licensed providers with
+                  full regulatory compliance.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-3">💰</div>
+                <h3 className="font-bold text-gray-900 mb-2">Transparent Pricing</h3>
+                <p className="text-sm text-gray-600">
+                  See exact fees and exchange rates before you confirm. No hidden charges or surprises.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-3">⚡</div>
+                <h3 className="font-bold text-gray-900 mb-2">Fast Transfers</h3>
+                <p className="text-sm text-gray-600">
+                  Modern technology enables quick processing. Many transfers complete within hours.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-blue-300 text-center">
+              <p className="text-sm text-gray-700">
+                <strong>Our Partners:</strong> We work with Transak for payment processing and Coins.ph
+                for PHP delivery—both licensed and regulated to ensure your transfer meets all legal requirements.
+              </p>
             </div>
           </div>
         </div>
@@ -91,7 +132,7 @@ function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4">💸 SwiftMonday</h3>
               <p className="text-gray-400">
-                The fastest way to send money to the Philippines.
+                A software platform connecting you to licensed remittance providers for US to Philippines transfers.
               </p>
             </div>
             <div>
@@ -104,24 +145,28 @@ function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link to="/about" className="hover:text-white">About Us</Link></li>
                 <li><Link to="/terms" className="hover:text-white">Terms of Service</Link></li>
                 <li><Link to="/privacy" className="hover:text-white">Privacy Policy</Link></li>
+                <li><Link to="/contact" className="hover:text-white">Contact Us</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link to="/contact" className="hover:text-white">Contact Us</Link></li>
-                <li>support@swiftmonday.com</li>
-                <li>Available 24/7</li>
+                <li><a href="mailto:support@swiftmonday.com" className="hover:text-white">support@swiftmonday.com</a></li>
+                <li><a href="mailto:security@swiftmonday.com" className="hover:text-white">security@swiftmonday.com</a></li>
+                <li className="text-gray-500">Mon-Fri, 9am-6pm ET</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 SwiftMonday. All rights reserved.</p>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p className="mb-2">
+              SwiftMonday, Inc. is a software platform. Remittance services are provided by licensed
+              third-party providers.
+            </p>
+            <p>&copy; 2025 SwiftMonday, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
