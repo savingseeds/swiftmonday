@@ -69,33 +69,59 @@ function Home() {
       {/* How It Works */}
       <HowItWorks />
 
-      {/* Trust Section - Updated */}
+      {/* Trust Section with Group Image */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Built on Trusted Infrastructure
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            SwiftMonday connects you to licensed payment processors and remittance providers who handle
-            all regulated activities. We focus on creating a simple, transparent experience while our
-            partners ensure your money moves safely and compliantly.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">2-4hrs</div>
-              <div className="text-sm text-gray-600">Typical Response Time</div>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Trusted by Filipinos Worldwide
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                SwiftMonday connects you to licensed payment processors and remittance providers who handle
+                all regulated activities. We focus on creating a simple, transparent experience while our
+                partners ensure your money moves safely and compliantly.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-white rounded-xl p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-orange-600">2-4hrs</div>
+                  <div className="text-sm text-gray-600">Typical Response Time</div>
+                </div>
+                <div className="bg-white rounded-xl p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-orange-600">Bank-Level</div>
+                  <div className="text-sm text-gray-600">Security Standards</div>
+                </div>
+                <div className="bg-white rounded-xl p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-orange-600">Licensed</div>
+                  <div className="text-sm text-gray-600">Partner Network</div>
+                </div>
+                <div className="bg-white rounded-xl p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-orange-600">24/7</div>
+                  <div className="text-sm text-gray-600">Email Support</div>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">Bank-Level</div>
-              <div className="text-sm text-gray-600">Security Standards</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">Licensed</div>
-              <div className="text-sm text-gray-600">Partner Network</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">24/7</div>
-              <div className="text-sm text-gray-600">Email Support</div>
+
+            {/* Right: Group Image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-lg">
+                <img
+                  src="/images/group1_home.png"
+                  alt="Happy family and friends using SwiftMonday"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                {/* Floating badge */}
+                <div className="absolute top-8 left-8 bg-white rounded-xl shadow-lg px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">⭐</span>
+                    <div>
+                      <div className="text-lg font-bold text-gray-900">4.9/5</div>
+                      <div className="text-xs text-gray-600">Customer Rating</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
