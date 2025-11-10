@@ -22,8 +22,8 @@ function Navigation({ onSendMoney }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
-          <div className="flex items-center">
-            <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center">
+            <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">
                 💸
               </div>
@@ -32,7 +32,7 @@ function Navigation({ onSendMoney }: NavigationProps) {
                 <span className="text-orange-500 ml-1">Monday</span>
               </h1>
             </div>
-          </div>
+          </Link>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
